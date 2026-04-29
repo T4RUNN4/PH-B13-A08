@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Logo from "./Logo";
+
 
 const Navbar = () => {
   return (
@@ -27,14 +29,14 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <Link href="/animals">All Animals</Link>
             </li>
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl font-bold">Qurbani <span className="text-red-600">Hat</span></Link>
+        <Logo></Logo>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -47,8 +49,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-          <Link href="/login" className="btn btn-soft mr-2">Login</Link>
-          <Link href="/register" className="btn btn-primary bg-red-600 border-0 text-white hover:bg-red-700">Register</Link>
+        <Link href="/login" className="btn btn-soft mr-2">
+          Login
+        </Link>
+        <Link
+          href="/register"
+          className="btn btn-primary bg-red-600 border-0 text-white hover:bg-red-700"
+        >
+          Register
+        </Link>
       </div>
     </div>
   );
