@@ -1,0 +1,31 @@
+import Tips from "./Tips";
+
+const tipsFetch = async () => {
+  const res = await fetch("http://qurbani-hat-tarunna.vercel.app/tips.json");
+  const data = res.json();
+
+  return data;
+};
+
+const TipsContainer = async () => {
+  const tips = await tipsFetch();
+
+  return (
+    <>
+      <div className="py-20 flex flex-col items-center justify-center bg-base-200">
+        <h1 className="text-5xl font-bold text-gray-800 mb-2">
+          <span className="text-red-500">Featured</span> Animals
+        </h1>
+        {
+            tips.map((tip) => {
+                return (
+                    <Tips key={tip.id} qus={tip.question} ans={tip.answer}></Tips>
+                )
+            })
+        }
+      </div>
+    </>
+  );
+};
+
+export default TipsContainer;
