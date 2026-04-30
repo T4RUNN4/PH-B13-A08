@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural foods.",
-    "image": "https://images.unsplash.com/photo-1596733430284-f7437764b1a9",
+    "image": "https://media.istockphoto.com/id/496397741/photo/typical-dutch-red-and-white-milk-cow.jpg?s=612x612&w=0&k=20&c=juTog_zRhJIQa0sOUcwk5WH1AM3PRxhlvsIm4dywzK8=",
     "category": "Large Animal",
     "isFeatured": false
   },
@@ -23,7 +23,7 @@
     "age": 4,
     "location": "Dhaka",
     "description": "Strong and heavy bull with excellent health condition.",
-    "image": "https://images.unsplash.com/photo-1500595046743-ddf4d3d753fd",
+    "image": "https://assets.farmsanctuary.org/content/uploads/2025/02/05152106/2023_06-09_FSNY_Aggie_cow_LH_4179-scaled.jpg",
     "category": "Large Animal",
     "isFeatured": true
   },
@@ -37,7 +37,7 @@
     "age": 3,
     "location": "Rajshahi",
     "description": "High-quality Sahiwal breed, properly vaccinated and farm-raised.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sahiwal_cattle.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO8x7913nowCfouxBbeR9zL1G5Rvx10t-YBQ&s",
     "category": "Large Animal",
     "isFeatured": false
   },
@@ -79,7 +79,7 @@
     "age": 2.5,
     "location": "Mymensingh",
     "description": "Affordable deshi cow, healthy and suitable for Qurbani.",
-    "image": "https://images.unsplash.com/photo-1562141961-c4d4a1b1c68f",
+    "image": "https://previews.123rf.com/images/dineshahir/dineshahir2001/dineshahir200100198/137354395-indian-cow-on-the-meadows-beautiful-cow-at-grass-meadows.jpg",
     "category": "Large Animal",
     "isFeatured": false
   },
@@ -93,7 +93,7 @@
     "age": 3.5,
     "location": "Sylhet",
     "description": "Well-maintained Friesian cross cow with strong build.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Holstein_cow.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/1280px-Cow_female_black_white.jpg",
     "category": "Large Animal",
     "isFeatured": true
   },
@@ -121,7 +121,7 @@
     "age": 3,
     "location": "Chattogram",
     "description": "Famous Red Chittagong breed, known for quality meat.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Red_Chittagong_Cattle.jpg",
+    "image": "https://static.vecteezy.com/system/resources/previews/009/975/911/large_2x/side-view-of-beautiful-banteng-cow-at-zoo-photo.jpg",
     "category": "Large Animal",
     "isFeatured": false
   },
@@ -149,7 +149,7 @@
     "age": 5,
     "location": "Jessore",
     "description": "Big size bull for group Qurbani, well taken care of.",
-    "image": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae",
+    "image": "https://th-thumbnailer.cdn-si-edu.com/Utn_phL2Y8mZym_jOh1AS7bnvzM=/fit-in/1072x0/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/6dfd1386-9311-492c-bc59-80f1e213e711.jpg",
     "category": "Large Animal",
     "isFeatured": true
   },
@@ -177,7 +177,7 @@
     "age": 3.2,
     "location": "Natore",
     "description": "Strong and healthy crossbreed cow with good meat quality.",
-    "image": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e",
+    "image": "https://t3.ftcdn.net/jpg/03/37/40/36/360_F_337403627_wkANkNVxwWUwuy4EZeIUwKRvcj9U355p.jpg",
     "category": "Large Animal",
     "isFeatured": false
   },
@@ -205,7 +205,7 @@
     "age": 4,
     "location": "Gazipur",
     "description": "Top-quality farm cow with excellent feeding and care.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Holstein_cow.jpg",
+    "image": "https://c8.alamy.com/comp/EPR4F1/cow-on-beautiful-tropical-beach-goa-india-EPR4F1.jpg",
     "category": "Large Animal",
     "isFeatured": true
   }
