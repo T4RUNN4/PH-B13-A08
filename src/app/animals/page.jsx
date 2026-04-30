@@ -27,6 +27,7 @@ const AnimalsPage = async () => {
               price={animal.price}
               img={animal.image}
               desc={animal.description}
+              id={animal.id}
             />
           );
         })}

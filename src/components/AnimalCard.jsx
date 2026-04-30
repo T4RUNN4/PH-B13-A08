@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link"
 
-export default function AnimalCard({ name, price, img, desc }) {
+export default function AnimalCard({ id, name, price, img, desc }) {
   return (
     <div className="card bg-base-100 shadow-sm">
       <figure className="p-3 rounded-md">
@@ -11,9 +12,9 @@ export default function AnimalCard({ name, price, img, desc }) {
         <p>{desc}</p>
         <p className="mt-2 font-bold">Price: {price}</p>
 
-        <button className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600 mt-4">
+        <Link href={`/animals/${id}`} className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600 mt-4">
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   );
