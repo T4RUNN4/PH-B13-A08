@@ -1,7 +1,7 @@
 import FeaturedCard from "./FeaturedCard";
 
 const animalsFetch = async () => {
-  const res = await fetch("http://localhost:3000/animals.json");
+  const res = await fetch("http://qurbani-hat-tarunna.vercel.app/animals.json");
   const data = res.json();
 
   return data;
