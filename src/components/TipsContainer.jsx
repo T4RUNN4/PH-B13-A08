@@ -16,13 +16,13 @@ const TipsContainer = async () => {
         <h1 className="text-5xl font-bold text-gray-800 mb-10">
           <span className="text-red-500">Qurbani</span> Tips
         </h1>
-        {
-            tips.map((tip) => {
-                return (
-                    <Tips key={tip.id} qus={tip.question} ans={tip.answer}></Tips>
-                )
-            })
-        }
+        <div>
+          {tips.map((tip) => {
+            return (
+              <Tips key={tip.id} qus={tip.question} ans={tip.answer}></Tips>
+            );
+          })}
+        </div>
       </div>
     </>
   );
