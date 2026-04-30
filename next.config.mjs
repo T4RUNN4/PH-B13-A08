@@ -6,8 +6,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ecdn.dhakatribune.net',
-        pathname: '/**',
+        hostname: '**',
+        port: '',
       },
     ],
   },

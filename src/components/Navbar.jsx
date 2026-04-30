@@ -1,8 +1,14 @@
+"use client";
 import Logo from "./Logo";
-import NavLink from "./NavLink"
+import NavLink from "./NavLink";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const Navbar = () => {
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+
   return (
     <div className="navbar bg-base-100 shadow-sm px-10">
       <div className="navbar-start">
@@ -49,15 +55,39 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href="/login" className="btn btn-soft mr-2">
-          Login
-        </Link>
-        <Link
-          href="/register"
-          className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600"
-        >
-          Register
-        </Link>
+        {isPending ? (
+          <span className="loading loading-spinner loading-md"></span>
+        ) : user ? (
+          <>
+            <Image
+              src={
+                user.image ||
+                "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
+              }
+              height={45}
+              width={45}
+              alt="user avatar"
+            ></Image>
+            <button
+              className="btn btn-soft ml-2"
+              onClick={async () => await authClient.signOut()}
+            >
+              Log Out
+            </button>
+          </>
+        ) : (
+          <>
+            <Link href="/login" className="btn btn-soft mr-2">
+              Login
+            </Link>
+            <Link
+              href="/register"
+              className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600"
+            >
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
