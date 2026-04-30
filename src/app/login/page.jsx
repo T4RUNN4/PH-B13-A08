@@ -25,8 +25,8 @@ export default function LoginPage() {
   };
 
   return (
-    <form className="hero mt-20 w-full px-10" onSubmit={handleSubmit(handleLogin)}>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
+    <form className="hero mt-20 px-6" onSubmit={handleSubmit(handleLogin)}>
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-4">
         <h3 className="text-red-500 font-bold text-center text-2xl mb-4">
           Login Form
         </h3>
