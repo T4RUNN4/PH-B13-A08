@@ -12,12 +12,12 @@ export default function Hero() {
           alt="Qurbani Hat"
           className="rounded-lg shadow-2xl"
         />
-        <div>
-          <h1 className="text-5xl font-bold text-gray-800">
+        <div className="flex flex-col items-center justify-center lg:items-start">
+          <h1 className="text-5xl font-bold text-gray-800 text-center lg:text-left">
             Tired of visiting <br />
             <span className="text-red-500">Physical Qurbani Hat?</span>{" "}
           </h1>
-          <p className="py-6 text-gray-600">
+          <p className="py-6 text-gray-600 text-center lg:text-left">
             Well, fear no more. Because Qurbani Hat is here to save you from hassel of physical labour. Now you can purchase your Qurbani animals just from your home with just a few clicks.
           </p>
           <Link
