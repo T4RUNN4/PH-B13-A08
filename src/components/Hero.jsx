@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="pt-24 bg-base-200 min-h-screen">
-      <div className="hero-content flex flex-col gap-14 lg:flex-row px-14 mx-auto">
+      <div className="hero-content flex flex-col gap-14 lg:flex-row px-6 md:px-14 mx-auto">
         <Image
           src="https://ecdn.dhakatribune.net/contents/cache/images/1200x630x1xxxxx1x694528/uploads/dten/2018/08/mehedi-hasan00044-1534795869338.jpg?watermark=media%2F2023%2F05%2F28%2F1280px-Dhaka_Tribune_Logo.svg-1-a9e61c86dded62d74300fef48fee558f.png"
           width={900}
@@ -13,7 +13,7 @@ export default function Hero() {
           className="rounded-lg shadow-2xl"
         />
         <div className="flex flex-col items-center justify-center lg:items-start">
-          <h1 className="text-5xl font-bold text-gray-800 text-center lg:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center lg:text-left">
             Tired of visiting <br />
             <span className="text-red-500">Physical Qurbani Hat?</span>{" "}
           </h1>
