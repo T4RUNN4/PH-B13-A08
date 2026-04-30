@@ -13,7 +13,7 @@ const TipsContainer = async () => {
   return (
     <>
       <div className="py-20 flex flex-col items-center justify-center bg-base-200 px-20">
-        <h1 className="text-5xl font-bold text-gray-800 mb-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-10">
           <span className="text-red-500">Qurbani</span> Tips
         </h1>
           {tips.map((tip) => {

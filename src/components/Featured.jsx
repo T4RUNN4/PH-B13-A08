@@ -12,7 +12,7 @@ const Featured = async () => {
 
   return (
     <div className="py-20 flex flex-col items-center justify-center bg-base-200">
-      <h1 className="text-5xl font-bold text-gray-800 mb-2">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
         <span className="text-red-500">Featured</span> Animals
       </h1>
       <p className="text-sm text-gray-700 mb-10">Top animals of the Hat</p>
