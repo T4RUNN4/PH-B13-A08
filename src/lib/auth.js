@@ -18,6 +18,6 @@ export const auth = betterAuth({
   }),
   trustedOrigins: [
     "http://localhost:3000",
-    "https://qurbani-ja9wa6ru6-t4runn4s-projects.vercel.app",
+    "https://https://qurbani-hat-tarunna.vercel.app/.app",
   ],
 });
