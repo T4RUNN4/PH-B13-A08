@@ -17,7 +17,7 @@ const AnimalDetails = async ({ params }) => {
 
   return (
     <>
-      <div className="py-20 flex flex-col items-center justify-center bg-base-200">
+      <div className="py-20 flex flex-col items-center justify-center bg-base-200 px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
           Animal Details
         </h1>
