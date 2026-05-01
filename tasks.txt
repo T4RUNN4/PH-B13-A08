@@ -2,4 +2,4 @@
 - Ater register, redirect to login page
 - Convert all the error message to toast
 - Redirect user to Home if he is logged in and trying to visit login and register
-- Icons on button
+- Add animation

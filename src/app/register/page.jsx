@@ -3,6 +3,8 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { UserRoundPlus } from 'lucide-react';
+import { toast } from 'react-toastify';
+import { NextResponse } from 'next/server'
 
 export default function RegisterPage() {
   const {
@@ -23,10 +25,11 @@ export default function RegisterPage() {
     });
 
     if(error) {
-      alert(error.message);
+      toast.error(error.message);
     }
     if(res) {
-      alert("Signup Successful");
+      toast.success("Signup Successful");
+      return NextResponse.redirect(new URL('/login', request.url))
     }
   };
 

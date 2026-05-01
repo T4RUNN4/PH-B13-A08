@@ -1,5 +1,6 @@
 import dns from "node:dns"
 dns.setServers(['8.8.8.8', '8.8.4.4']);
+import { ToastContainer } from 'react-toastify';
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
+        <ToastContainer />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import {
   VenusAndMars,
   CalendarCheck,
 } from "lucide-react";
+import BookingModal from "@/components/BookingModal";
 
 const animalsFetch = async () => {
   const res = await fetch(
@@ -17,9 +18,7 @@ const animalsFetch = async () => {
 
 const AnimalDetails = async ({ params }) => {
   const { id } = await params;
-
   const animals = await animalsFetch();
-
   const animal = animals.find((animal) => animal.id === Number(id));
 
   return (
@@ -86,9 +85,7 @@ const AnimalDetails = async ({ params }) => {
             <h1 className="text-4xl font-bold mt-6">
               Price: <span className="text-gray-800">{animal.price} BDT</span>
             </h1>
-            <button className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600 mt-2">
-              <CalendarCheck /> Book Now
-            </button>
+            <BookingModal />
           </div>
         </div>
       </div>
