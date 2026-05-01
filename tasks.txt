@@ -1,10 +1,10 @@
-- After register, blank the form field
 - Ater register, redirect to login page
-- Convert all the error message to toast
-- Redirect user to Home if he is logged in and trying to visit login and register
 - Add animation
 - Setup proxy
+- Hero with bg imaage
 
 
+Ask in support
 - Login Button on nav issue
 - Auto GitHub Commit
+- Restrict login and register for user

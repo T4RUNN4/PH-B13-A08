@@ -50,15 +50,14 @@ const Navbar = () => {
             ) : user ? (
               <>
                 <li>
-                  <Image
-                    src={
-                      user.image ||
-                      "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
-                    }
-                    height={45}
-                    width={45}
-                    alt="user avatar"
-                  ></Image>
+                  <Link href="/profile/my-profile">
+                    <Image
+                      src={user.image}
+                      height={45}
+                      width={45}
+                      alt="user avatar"
+                    ></Image>
+                  </Link>
                 </li>
                 <li>
                   <button
