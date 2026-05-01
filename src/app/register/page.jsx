@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { UserRoundPlus } from 'lucide-react';
 import { toast } from 'react-toastify';
-import { NextResponse } from 'next/server'
 
 export default function RegisterPage() {
   const {
@@ -21,7 +20,7 @@ export default function RegisterPage() {
       email: email,
       password: password,
       image: photo,
-      callbackURL: "/login",
+      callbackURL: "/",
     });
 
     if(error) {
@@ -29,7 +28,6 @@ export default function RegisterPage() {
     }
     if(res) {
       toast.success("Signup Successful");
-      return NextResponse.redirect(new URL('/login', request.url))
     }
   };
 
