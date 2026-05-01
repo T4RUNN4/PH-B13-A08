@@ -1,8 +1,8 @@
-- Add animation
-
-- Check for google login
-
 Ask in support
-- Login Button on nav issue
+
+- Login Button on nav
 - Auto GitHub Commit
 - Restrict login and register for user
+- 404 lottie
+- Google login
+- Extra data in json
