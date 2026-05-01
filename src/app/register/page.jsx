@@ -30,7 +30,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <form className="hero mt-20 px-6" onSubmit={handleSubmit(handleRegister)}>
+    <form className="hero mt-20 px-6 lg:px-52" onSubmit={handleSubmit(handleRegister)}>
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-4">
         <h3 className="text-red-500 font-bold text-center text-2xl mb-4">
           Registration Form
