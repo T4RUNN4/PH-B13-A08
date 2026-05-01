@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { LogIn } from 'lucide-react';
 import { toast } from 'react-toastify';
+import GoogleLogin from "@/components/GoogleLogin";
 
 export default function LoginPage() {
   const {
@@ -61,6 +62,7 @@ export default function LoginPage() {
         >
           <LogIn /> Login
         </button>
+        <GoogleLogin className="mt-1"/>
         <div className="text-center mt-1.5">
           New Here?{" "}
           <Link href="/register" className="text-red-600">

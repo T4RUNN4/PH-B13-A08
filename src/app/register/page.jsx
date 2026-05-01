@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { UserRoundPlus } from 'lucide-react';
 import { toast } from 'react-toastify';
+import GoogleLogin from "@/components/GoogleLogin";
 
 export default function RegisterPage() {
   const {
@@ -88,6 +89,7 @@ export default function RegisterPage() {
         >
           <UserRoundPlus /> Register
         </button>
+        <GoogleLogin className="mt-1"/>
         <div className="text-center mt-1.5">
           Already registered?{" "}
           <Link href="/register" className="text-red-600">
