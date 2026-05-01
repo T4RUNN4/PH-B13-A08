@@ -3,6 +3,7 @@
 - Setup proxy
 - Hero with bg imaage
 
+- Configure domain before final setup
 
 Ask in support
 - Login Button on nav issue

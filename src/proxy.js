@@ -10,7 +10,7 @@ export async function proxy(request) {
 
   const { pathname } = request.nextUrl;
 
-  if (!session && pathname.startsWith("/animals/")) {
+  if (!session && (pathname.startsWith("/animals/") || pathname.startsWith("/profile/"))) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
@@ -21,5 +21,5 @@ export async function proxy(request) {
 }
 
 export const config = {
-  matcher: ["/animals/:path*", "/login", "/register"],
+  matcher: ["/animals/:path*", "/login", "/register", "/profile"],
 };

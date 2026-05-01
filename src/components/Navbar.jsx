@@ -118,7 +118,6 @@ const Navbar = () => {
                 width={45}
                 alt="user avatar"
               ></Image>
-              {user.name}
             </Link>
             <button
               className="btn btn-soft ml-2"
