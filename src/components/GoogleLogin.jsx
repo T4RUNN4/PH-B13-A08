@@ -10,6 +10,7 @@ const GoogleLogin = () => {
 
   return (
     <button
+      type="button"
       class="btn bg-white text-black border-[#e5e5e5]"
       onClick={handleGoogle}
     >
