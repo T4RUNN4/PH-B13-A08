@@ -1,7 +1,6 @@
 - Ater register, redirect to login page
 - Add animation
-- Setup proxy
-- Hero with bg imaage
+- Hero with bg image
 
 Ask in support
 - Login Button on nav issue
