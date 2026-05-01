@@ -4,3 +4,7 @@
 - Redirect user to Home if he is logged in and trying to visit login and register
 - Add animation
 - Setup proxy
+
+
+- Login Button on nav issue
+- Auto GitHub Commit

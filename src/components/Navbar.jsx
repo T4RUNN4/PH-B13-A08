@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
-import { LogOut, LogIn, UserRoundPlus, House, Search } from 'lucide-react';
+import { LogOut, LogIn, UserRoundPlus, House, Search } from "lucide-react";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -36,11 +36,56 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink href="/"><House /> Home</NavLink>
+              <NavLink href="/">
+                <House /> Home
+              </NavLink>
             </li>
             <li>
-              <NavLink href="/animals"><Search /> All Animals</NavLink>
+              <NavLink href="/animals">
+                <Search /> All Animals
+              </NavLink>
             </li>
+            {isPending ? (
+              <span className="loading loading-spinner loading-md"></span>
+            ) : user ? (
+              <>
+                <li>
+                  <Image
+                    src={
+                      user.image ||
+                      "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
+                    }
+                    height={45}
+                    width={45}
+                    alt="user avatar"
+                  ></Image>
+                </li>
+                <li>
+                  <button
+                    className="btn btn-soft ml-2"
+                    onClick={async () => await authClient.signOut()}
+                  >
+                    <LogOut /> Log Out
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link href="/login" className="btn btn-soft mt-2">
+                    <LogIn /> Login
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/register"
+                    className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600 mt-1"
+                  >
+                    <UserRoundPlus /> Register
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <Logo></Logo>
@@ -48,14 +93,18 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink href="/"><House /> Home</NavLink>
+            <NavLink href="/">
+              <House /> Home
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/animals"><Search /> All Animals</NavLink>
+            <NavLink href="/animals">
+              <Search /> All Animals
+            </NavLink>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="hidden md:flex navbar-end">
         {isPending ? (
           <span className="loading loading-spinner loading-md"></span>
         ) : user ? (

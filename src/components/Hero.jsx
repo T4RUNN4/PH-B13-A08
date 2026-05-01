@@ -1,25 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Search } from 'lucide-react';
+import { Search } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="pt-24 bg-base-200 min-h-screen">
-      <div className="hero-content flex flex-col gap-14 lg:flex-row px-6 md:px-14 mx-auto">
+    <div className="py-24 bg-base-200">
+      <div className="flex flex-col items-center justify-center gap-14 px-6 md:px-14 mx-auto max-w-6xl">
         <Image
           src="https://ecdn.dhakatribune.net/contents/cache/images/1200x630x1xxxxx1x694528/uploads/dten/2018/08/mehedi-hasan00044-1534795869338.jpg?watermark=media%2F2023%2F05%2F28%2F1280px-Dhaka_Tribune_Logo.svg-1-a9e61c86dded62d74300fef48fee558f.png"
-          width={900}
-          height={530}
+          width={800}
+          height={900}
           alt="Qurbani Hat"
           className="rounded-lg shadow-2xl"
         />
-        <div className="flex flex-col items-center justify-center lg:items-start">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center lg:text-left">
-            Tired of visiting <br />
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center">
+            Tired of visiting{" "}
             <span className="text-red-500">Physical Qurbani Hat?</span>{" "}
           </h1>
-          <p className="py-6 text-gray-600 text-center lg:text-left">
-            Well, fear no more. Because Qurbani Hat is here to save you from hassel of physical labour. Now you can purchase your Qurbani animals just from your home with just a few clicks.
+          <p className="py-6 text-gray-600 text-center max-w-3xl">
+            Well, fear no more. Because Qurbani Hat is here to save you from
+            hassel of physical labour. Now you can purchase your Qurbani animals
+            just from your home with just a few clicks.
           </p>
           <Link
             href="/animals"
