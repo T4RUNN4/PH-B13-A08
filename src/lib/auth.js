@@ -19,6 +19,5 @@ export const auth = betterAuth({
   trustedOrigins: [
     "http://localhost:3000",
     "https://qurbani-hat-tarunna.vercel.app",
-    "https://fantastic-meme-rj5w9pwj7462x6vx-3000.app.github.dev"
   ],
 });

@@ -121,7 +121,7 @@ const Navbar = () => {
             </Link>
             <button
               className="btn btn-soft ml-2"
-              onClick={async () => await authClient.signOut()}
+              onClick={async() => await authClient.signOut()}
             >
               <LogOut /> Log Out
             </button>
