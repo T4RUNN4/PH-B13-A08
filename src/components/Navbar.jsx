@@ -108,15 +108,17 @@ const Navbar = () => {
           <span className="loading loading-spinner loading-md"></span>
         ) : user ? (
           <>
-            <Image
-              src={
-                user.image ||
-                "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
-              }
-              height={45}
-              width={45}
-              alt="user avatar"
-            ></Image>
+            <Link href="/profile/my-profile">
+              <Image
+                src={
+                  user.image ||
+                  "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
+                }
+                height={45}
+                width={45}
+                alt="user avatar"
+              ></Image>
+            </Link>
             <button
               className="btn btn-soft ml-2"
               onClick={async () => await authClient.signOut()}
