@@ -85,7 +85,7 @@ const AnimalDetails = async ({ params }) => {
             <h1 className="text-4xl font-bold mt-6">
               Price: <span className="text-gray-800">{animal.price} BDT</span>
             </h1>
-            <BookingModal />
+            <BookingModal name={animal.name}/>
           </div>
         </div>
       </div>

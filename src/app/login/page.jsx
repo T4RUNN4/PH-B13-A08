@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { LogIn } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 export default function LoginPage() {
   const {
@@ -21,7 +22,7 @@ export default function LoginPage() {
     });
 
     if(error){
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
