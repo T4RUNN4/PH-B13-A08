@@ -16,7 +16,7 @@ export default function MyProfle() {
       {isPending ? (
         <span className="loading loading-spinner loading-md"></span>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center mt-8 bg-white p-8 rounded-md">
           <Image
             src={user.image}
             alt={user.name}

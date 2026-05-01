@@ -25,6 +25,7 @@ export default function LoginPage() {
     if(error){
       toast.error(error.message);
     }
+    toast.success("Login successfull");
   };
 
   return (
