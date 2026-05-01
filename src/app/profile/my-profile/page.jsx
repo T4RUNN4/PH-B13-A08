@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Image } from "next/image";
+import Image from "next/image";
 import { Link } from "next/link";
 import { UserRoundPen } from "lucide-react";
 
