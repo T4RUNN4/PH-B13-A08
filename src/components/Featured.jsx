@@ -26,6 +26,8 @@ const Featured = async () => {
                 price={animal.price}
                 img={animal.image}
                 id={animal.id}
+                type={animal.type}
+                category={animal.category}
               />
             );
           }

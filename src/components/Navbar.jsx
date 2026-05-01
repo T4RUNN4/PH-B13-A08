@@ -4,6 +4,7 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import { LogOut, LogIn, UserRoundPlus, House, Search } from 'lucide-react';
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -35,10 +36,10 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink href="/" text="Home"></NavLink>
+              <NavLink href="/"><House /> Home</NavLink>
             </li>
             <li>
-              <NavLink href="/animals" text="All Animals"></NavLink>
+              <NavLink href="/animals"><Search /> All Animals</NavLink>
             </li>
           </ul>
         </div>
@@ -47,10 +48,10 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink href="/" text="Home"></NavLink>
+            <NavLink href="/"><House /> Home</NavLink>
           </li>
           <li>
-            <NavLink href="/animals" text="All Animals"></NavLink>
+            <NavLink href="/animals"><Search /> All Animals</NavLink>
           </li>
         </ul>
       </div>
@@ -72,19 +73,19 @@ const Navbar = () => {
               className="btn btn-soft ml-2"
               onClick={async () => await authClient.signOut()}
             >
-              Log Out
+              <LogOut /> Log Out
             </button>
           </>
         ) : (
           <>
             <Link href="/login" className="btn btn-soft mr-2">
-              Login
+              <LogIn /> Login
             </Link>
             <Link
               href="/register"
               className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600"
             >
-              Register
+              <UserRoundPlus /> Register
             </Link>
           </>
         )}

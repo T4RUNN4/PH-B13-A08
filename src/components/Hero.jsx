@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Search } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -24,7 +25,7 @@ export default function Hero() {
             href="/animals"
             className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600"
           >
-            Browse animals
+            <Search /> Browse animals
           </Link>
         </div>
       </div>

@@ -28,6 +28,7 @@ const AnimalsPage = async () => {
               img={animal.image}
               desc={animal.description}
               id={animal.id}
+              featured={animal.isFeatured}
             />
           );
         })}

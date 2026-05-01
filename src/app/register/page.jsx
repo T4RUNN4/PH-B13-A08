@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { UserRoundPlus } from 'lucide-react';
 
 export default function RegisterPage() {
   const {
@@ -31,8 +32,8 @@ export default function RegisterPage() {
 
   return (
     <form className="hero mt-20 px-6 lg:px-52" onSubmit={handleSubmit(handleRegister)}>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-4">
-        <h3 className="text-red-500 font-bold text-center text-2xl mb-4">
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-6 py-8">
+        <h3 className="text-red-500 font-bold text-center text-3xl mb-4">
           Registration Form
         </h3>
 
@@ -84,9 +85,9 @@ export default function RegisterPage() {
           type="submit"
           className="btn btn-primary bg-red-500 text-white hover:bg-red-600 border-0 mt-8"
         >
-          Register
+          <UserRoundPlus /> Register
         </button>
-        <div className="text-center">
+        <div className="text-center mt-1.5">
           Already registered?{" "}
           <Link href="/register" className="text-red-600">
             Login from here

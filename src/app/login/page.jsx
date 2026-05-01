@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { LogIn } from 'lucide-react';
 
 export default function LoginPage() {
   const {
@@ -26,8 +27,8 @@ export default function LoginPage() {
 
   return (
     <form className="hero mt-20 px-6 lg:px-52" onSubmit={handleSubmit(handleLogin)}>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-4">
-        <h3 className="text-red-500 font-bold text-center text-2xl mb-4">
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-6 py-8">
+        <h3 className="text-red-500 font-bold text-center text-3xl mb-4">
           Login Form
         </h3>
 
@@ -57,9 +58,9 @@ export default function LoginPage() {
           type="submit"
           className="btn btn-primary bg-red-500 text-white hover:bg-red-600 border-0 mt-8"
         >
-          Login
+          <LogIn /> Login
         </button>
-        <div className="text-center">
+        <div className="text-center mt-1.5">
           New Here?{" "}
           <Link href="/register" className="text-red-600">
             Register at our platform
