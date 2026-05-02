@@ -49,7 +49,7 @@ const Navbar = () => {
               <span className="loading loading-spinner loading-md"></span>
             ) : user ? (
               <>
-                <li>
+                <li className="md:hidden">
                   <Link href="/profile/my-profile">
                     <Image
                       src={user.image}
@@ -59,7 +59,7 @@ const Navbar = () => {
                     ></Image>
                   </Link>
                 </li>
-                <li>
+                <li className="md:hidden">
                   <button
                     className="btn btn-soft ml-2"
                     onClick={async () =>
@@ -78,12 +78,12 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <li>
+                <li className="md:hidden">
                   <Link href="/login" className="btn btn-soft mt-2">
                     <LogIn /> Login
                   </Link>
                 </li>
-                <li>
+                <li className="md:hidden">
                   <Link
                     href="/register"
                     className="btn btn-primary bg-red-500 border-0 text-white hover:bg-red-600 mt-1"

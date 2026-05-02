@@ -1,8 +1,9 @@
 import FeaturedCard from "./FeaturedCard";
 import { animalsFetch } from "@/utils/animalsFetch";
 
-const animals = await animalsFetch();
-const Featured = () => {
+const Featured = async () => {
+  const animals = await animalsFetch();
+
   return (
     <div className="pt-20 flex flex-col items-center justify-center bg-base-200 px-10 md:px-16">
       <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
