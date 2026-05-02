@@ -5,10 +5,20 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { LogOut, LogIn, UserRoundPlus, House, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
+
+  const handleLogout = async () =>
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          router.push("/login");
+        },
+      },
+    });
 
   return (
     <div className="navbar bg-base-100 shadow-sm px-2 md:px-10 sticky top-0 z-100">
@@ -60,18 +70,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="md:hidden">
-                  <button
-                    className="btn btn-soft ml-2"
-                    onClick={async () =>
-                      await authClient.signOut({
-                        fetchOptions: {
-                          onSuccess: () => {
-                            router.push("/login");
-                          },
-                        },
-                      })
-                    }
-                  >
+                  <button className="btn btn-soft ml-2" onClick={handleLogout}>
                     <LogOut /> Log Out
                   </button>
                 </li>
@@ -127,10 +126,7 @@ const Navbar = () => {
                 alt="user avatar"
               ></Image>
             </Link>
-            <button
-              className="btn btn-soft ml-2"
-              onClick={async () => await authClient.signOut()}
-            >
+            <button className="btn btn-soft ml-2" onClick={handleLogout}>
               <LogOut /> Log Out
             </button>
           </>
