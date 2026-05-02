@@ -62,7 +62,15 @@ const Navbar = () => {
                 <li>
                   <button
                     className="btn btn-soft ml-2"
-                    onClick={async () => await authClient.signOut()}
+                    onClick={async () =>
+                      await authClient.signOut({
+                        fetchOptions: {
+                          onSuccess: () => {
+                            router.push("/login");
+                          },
+                        },
+                      })
+                    }
                   >
                     <LogOut /> Log Out
                   </button>
@@ -121,7 +129,7 @@ const Navbar = () => {
             </Link>
             <button
               className="btn btn-soft ml-2"
-              onClick={async() => await authClient.signOut()}
+              onClick={async () => await authClient.signOut()}
             >
               <LogOut /> Log Out
             </button>
