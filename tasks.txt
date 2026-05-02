@@ -1,9 +1,11 @@
+- Logout Rediretion
+- Registration Redirection
+
 Ask in support
 
 - Login Button on nav
 - Auto GitHub Commit
 - Restrict login and register for user
 - 404 lottie
-- Google login
 - Extra data in json
 - Extra section

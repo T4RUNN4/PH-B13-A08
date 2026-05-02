@@ -1,11 +1,5 @@
 import AnimalCard from "@/components/AnimalCard";
-
-const animalsFetch = async () => {
-  const res = await fetch("http://qurbani-hat-tarunna.vercel.app/animals.json");
-  const data = res.json();
-
-  return data;
-};
+import { animalsFetch } from "@/utils/animalsFetch";
 
 const AnimalsPage = async () => {
   const animals = await animalsFetch();

@@ -7,14 +7,8 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import BookingModal from "@/components/BookingModal";
+import { animalsFetch } from "@/utils/animalsFetch";
 
-const animalsFetch = async () => {
-  const res = await fetch(
-    "https://qurbani-hat-tarunna.vercel.app/animals.json",
-  );
-  const data = await res.json();
-  return data;
-};
 
 const AnimalDetails = async ({ params }) => {
   const { id } = await params;
