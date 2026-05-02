@@ -32,7 +32,7 @@ const AnimalDetails = async ({ params }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
         <Image
           src={animal.image}
-          alt="animal name"
+          alt={animal.name}
           height={500}
           width={500}
           className="rounded-md drop-shadow-xl"

@@ -1,8 +1,12 @@
 "use client";
 import { CalendarCheck } from "lucide-react";
 import { toast } from "react-toastify";
+import { authClient } from "@/lib/auth-client";
 
 export default function BookingModal({ name }) {
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -11,7 +15,13 @@ export default function BookingModal({ name }) {
     const email = e.target.email.value;
     const address = e.target.address.value;
 
-    if(!username || !phone || !email || !address) {
+    if(!user) {
+      toast.error("Login First");
+      document.getElementById("my_modal_3").close();
+      return;
+    }
+
+    if (!username || !phone || !email || !address) {
       toast.error("Fillup all the necessary field");
       return;
     }
@@ -19,7 +29,7 @@ export default function BookingModal({ name }) {
     toast.success(`${name} is booked for you, ${username}`);
     e.target.reset();
     document.getElementById("my_modal_3").close();
-  }
+  };
 
   return (
     <>
