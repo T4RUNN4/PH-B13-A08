@@ -1,12 +1,14 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { UserRoundPlus } from 'lucide-react';
-import { toast } from 'react-toastify';
+import { UserRoundPlus } from "lucide-react";
+import { toast } from "react-toastify";
 import GoogleLogin from "@/components/GoogleLogin";
 
 export default function RegisterPage() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -24,16 +26,21 @@ export default function RegisterPage() {
       callbackURL: "/",
     });
 
-    if(error) {
+    if (error) {
       toast.error(error.message);
     }
-    if(res) {
+
+    if (res) {
       toast.success("Signup Successful");
+      router.push("/login");
     }
   };
 
   return (
-    <form className="hero mt-20 px-6 lg:px-52" onSubmit={handleSubmit(handleRegister)}>
+    <form
+      className="hero mt-20 px-6 lg:px-52"
+      onSubmit={handleSubmit(handleRegister)}
+    >
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border px-6 py-8">
         <h3 className="text-red-500 font-bold text-center text-3xl mb-4">
           Registration Form
@@ -89,10 +96,10 @@ export default function RegisterPage() {
         >
           <UserRoundPlus /> Register
         </button>
-        <GoogleLogin className="mt-1"/>
+        <GoogleLogin className="mt-1" />
         <div className="text-center mt-1.5">
           Already registered?{" "}
-          <Link href="/register" className="text-red-600">
+          <Link href="/login" className="text-red-600">
             Login from here
           </Link>{" "}
         </div>
