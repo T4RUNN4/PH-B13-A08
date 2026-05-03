@@ -10,9 +10,6 @@ export default function AnimalCard({ id, name, price, img, desc, featured }) {
           <Image src={img} alt={name} fill className="object-cover" />
         </div>
       </figure>
-      {/* <figure className="p-3 rounded-md max-w-62.5 max-h-62.5">
-        <Image src={img} alt={name} height={250} width={250} />
-      </figure> */}
       <div className="card-body">
         {featured === true ? (
           <p className="badge badge-soft bg-red-600 text-white">Featured</p>

@@ -46,19 +46,19 @@ export default function AnimalsContainer({ animals }) {
         <summary className="btn m-1">Sort Animals</summary>
         <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
           <li
-            className={`${sort === "default" ? "text-red-600" : ""}`}
+            className={`${sort === "default" ? "text-red-600 font-bold" : ""}`}
             onClick={handleDefault}
           >
             <a>Default</a>
           </li>
           <li
-            className={`${sort === "highToLow" ? "text-red-600" : ""}`}
+            className={`${sort === "highToLow" ? "text-red-600 font-bold" : ""}`}
             onClick={handleHighToLow}
           >
             <a>Price: High &gt; Low</a>
           </li>
           <li
-            className={`${sort === "lowToHigh" ? "text-red-600" : ""}`}
+            className={`${sort === "lowToHigh" ? "text-red-600 font-bold" : ""}`}
             onClick={handleLowToHigh}
           >
             <a>Price: Low &lt; High</a>
